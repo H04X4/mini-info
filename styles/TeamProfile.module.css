@@ -24,18 +24,21 @@
 .teamMemberContainer {
     align-items: center;
     margin-bottom: 41px;
+    
     height: 202px;
     display: flex;
     background: #F9F9F9;
     border-radius: 15px;
     max-width: 482px;
     width: 100%;
-    margin-right: 40px;
+    margin-right: 15px;
 }
 
 .memberImage {
     margin-left: 20px;
     border-radius: 500px;
+    
+   
 }
 
 .memberInfo {
@@ -67,14 +70,29 @@
     height: 76px;
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 376px)  {
     .container {
+        display: flex;
         justify-content: center;
+        margin-left: 15px;
+        
+    }
+    .memberImage{
+        display: none;
+    }
+
+}
+
+@media (max-width: 412px)  {
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-left: 15px;
+        
+    }
+    .memberImage{
+        display: none;
     }
 }
 
-@media (max-width: 950px) {
-    .container {
-        margin-left: 15px;
-    }
-}
+

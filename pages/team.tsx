@@ -2,6 +2,7 @@ import s from '../styles/TeamProfile.module.css'
 import {teamMembers} from "../src/constants/teamMembers";
 import Image from 'next/image'
 import {MainContainer} from "../src/containers/mainContainer";
+import Footer from "../src/components/Footer/footer";
 
 const TeamProfile = () => {
     return (
@@ -21,6 +22,7 @@ const TeamProfile = () => {
 
                 ) )}
             </div>
+            <Footer/>
         </MainContainer>
     );
 };

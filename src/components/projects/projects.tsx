@@ -3,6 +3,7 @@ import s from './projects.module.css'
 import Image from "next/image";
 import Link from "next/link";
 import {motion} from "framer-motion";
+import Footer from "../Footer/footer";
 import {featureAnimation} from "../teamMember/teamMembers";
 import {projectsData} from "../../constants/projectsData";
 
@@ -26,7 +27,9 @@ export const Projects = () => {
                     </Link>
                 ) )
             }
+            
         </div>
+          
     );
 };
 

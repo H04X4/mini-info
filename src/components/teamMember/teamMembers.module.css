@@ -32,7 +32,8 @@
 }
 @media (max-width: 880px){
     .container{
-        width: 400px;
+        display: flex;
+        width: 209px;
         margin-left: 0px;
         flex-direction: column;
         justify-content: center;

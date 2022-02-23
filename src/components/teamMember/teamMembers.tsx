@@ -1,6 +1,7 @@
 import Image from "next/image";
 import s from './teamMembers.module.css'
 import {motion} from "framer-motion";
+import Footer from "../Footer/footer";
 import {teamMembers} from "../../constants/teamMembers";
 
 export const featureAnimation = {
@@ -25,11 +26,12 @@ const TeamMembers = () => {
                                 custom={idx + 1} variants={featureAnimation}
                                 viewport={{once: true}}
                                 initial='hidden' animate='visible'>
-                        <Image src={elem.img} alt={'teamMember'}/>
+                        <Image  src={elem.img} alt={'teamMember'} className={s.img}/>
                         <div className={s.name}>{elem.name}</div>
                         <div className={s.skills}>{elem.skills}</div>
                     </motion.div> ) )}
             </div>
+           
         </>
     );
 };
