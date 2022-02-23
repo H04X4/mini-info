@@ -1,0 +1,47 @@
+.container {
+    width: 750px;
+    margin-left: 125px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.member {
+    width: 210px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member:nth-last-child(-n+2) {
+    margin-left: 80px;
+}
+.member:nth-last-child(-n+1) {
+    margin-left: 50px;
+}
+.name {
+    margin-top: 20px;
+}
+
+.skills {
+    font-size: 12px;
+    color: #808080;
+    margin-top: 5px;
+}
+@media (max-width: 880px){
+    .container{
+        width: 400px;
+        margin-left: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .member:nth-last-child(-n+2) {
+        margin-left: 0px;
+    }
+    .member:nth-last-child(-n+1) {
+        margin-left: 0px;
+    }
+}

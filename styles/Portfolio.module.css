@@ -1,0 +1,23 @@
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 34px;
+    margin-top: 81px;
+    margin-bottom: 54px;
+    animation: titleAnimation 1.5s forwards;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}

@@ -1,0 +1,80 @@
+.container {
+
+    margin-top: 78px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-animation: TeamProfile_containerAnimation__Bas6e 1.5s forwards;
+    animation: TeamProfile_containerAnimation__Bas6e 1.5s forwards;
+    flex-direction: row;
+    justify-content: center;
+
+
+
+}
+
+@keyframes containerAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.teamMemberContainer {
+    align-items: center;
+    margin-bottom: 41px;
+    height: 202px;
+    display: flex;
+    background: #F9F9F9;
+    border-radius: 15px;
+    max-width: 482px;
+    width: 100%;
+    margin-right: 40px;
+}
+
+.memberImage {
+    margin-left: 20px;
+    border-radius: 500px;
+}
+
+.memberInfo {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.memberName {
+    font-size: 14px;
+    line-height: 140.4%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.memberSkills {
+    font-size: 12px;
+    line-height: 140.4%;
+    text-align: center;
+    color: #808080;
+    margin-bottom: 8px;
+}
+
+.memberDscr {
+    font-size: 12px;
+    line-height: 160.9%;
+    width: 278px;
+    height: 76px;
+}
+
+@media (max-width: 1700px) {
+    .container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        margin-left: 15px;
+    }
+}
