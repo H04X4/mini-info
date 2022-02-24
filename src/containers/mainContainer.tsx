@@ -1,20 +1,37 @@
 import Head from "next/head";
 import Header from "../components/Header/header";
-import React from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import Burger from "../components/burger/burgerMenu";
-interface IMainContainer{
-    children : JSX.Element|JSX.Element[],
+import {burgerContext} from "../context/burgerContext";
+
+interface IMainContainer {
+    children: JSX.Element | JSX.Element[],
     title: string
 }
-export const MainContainer = ( {children , title}:IMainContainer ) => {
+
+export const MainContainer = ( {children, title}: IMainContainer ) => {
+    const {burgerIsOpen, setBurgerIsOpen} = useContext ( burgerContext )
+    const ref = useRef ()
+    const headerRef = useRef ()
+    useEffect ( () => {
+        const checkIfClickedOutside = e => {
+            if (!ref.current?.contains ( e.target ) && !headerRef.current?.contains ( e.target )) {
+                setBurgerIsOpen ( false )
+            }
+        }
+        document.addEventListener ( "mousedown", checkIfClickedOutside )
+        return () => {
+            document.removeEventListener ( "mousedown", checkIfClickedOutside )
+        }
+    }, [burgerIsOpen] )
     return (
         <>
             <Head>
                 <title>{title}</title>
             </Head>
             <>
-                <Header/>
-                <Burger/>
+                <Header innerRef={headerRef}/>
+                <Burger innerRef={ref}/>
                 {children}
             </>
         </>

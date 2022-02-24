@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useState} from "react";
 import Image from 'next/image'
 import TeamMembers from "../teamMember/teamMembers";
 import {Projects} from "../projects/projects";
@@ -9,19 +9,15 @@ import main from './main.module.css';
 import image from '../assets/img-main/image_left.svg';
 import image_n from '../assets/img-main/image_right.svg';
 import {MainContainer} from "../../containers/mainContainer";
-import Header from "../Header/header";
-// я добавлял <Header/> но ему не нравиться 
+
 const Main: React.FC = (): JSX.Element => {
     const buttons: string[] = ['Кто мы?', 'Наша команда', 'Наше портфолио']
     const [activeTab, setActiveTab] = useState<number> ( 0 );
     const [modalIsOpen, setModalIsOpen] = useState<boolean> ( false )
     return (
-        
         <MainContainer title={'Main Page'}>
             <BackcallForm modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
-            
             <div className={main.main_wrapper}>
-                
                 <div className={main.container}>
                     <div className={main.image}>
                         <div className={main.rightimg}>
@@ -83,7 +79,7 @@ const Main: React.FC = (): JSX.Element => {
             </div>
             <Contact/>
             <Footer/>
-            
+
         </MainContainer>
     )
 }

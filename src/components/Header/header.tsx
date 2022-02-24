@@ -7,10 +7,10 @@ import React, {useContext} from "react";
 import cn from 'classnames';
 import {burgerContext} from "../../context/burgerContext";
 
-const Header = () => {
+const Header = ( {innerRef} ) => {
     const {burgerIsOpen, setBurgerIsOpen} = useContext ( burgerContext )
     return (
-        <div className={header.wrapper}>
+        <div ref={innerRef} className={header.wrapper}>
             <header className={header.header}>
                 <Link href='/'>
                     <a className={header.link}>

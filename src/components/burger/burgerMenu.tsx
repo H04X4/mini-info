@@ -6,12 +6,12 @@ import React, {useContext} from "react";
 import {burgerContext} from "../../context/burgerContext";
 import {useRouter} from "next/router";
 
-const Burger = () => {
+const Burger = ({innerRef}) => {
     const {burgerIsOpen, setBurgerIsOpen} = useContext ( burgerContext )
     const Router = useRouter ()
     return (
         <>
-            <div className={burgerIsOpen ? cn ( main.burgerMenu, main.active ) : main.burgerMenu}>
+            <div ref={innerRef} className={burgerIsOpen ? cn ( main.burgerMenu, main.active ) : main.burgerMenu}>
                 <ul>
                     <Link href='/portfolio' passHref>
                         <li onClick={() => setBurgerIsOpen ( false )} className={main.burgerListItem}>Наши проекты</li>
