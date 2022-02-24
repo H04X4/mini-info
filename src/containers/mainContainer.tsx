@@ -14,7 +14,7 @@ export const MainContainer = ( {children, title}: IMainContainer ) => {
     const ref = useRef ()
     const headerRef = useRef ()
     useEffect ( () => {
-        const checkIfClickedOutside = e => {
+        const checkIfClickedOutside = (e: any) => {
             if (!ref.current?.contains ( e.target ) && !headerRef.current?.contains ( e.target )) {
                 setBurgerIsOpen ( false )
             }

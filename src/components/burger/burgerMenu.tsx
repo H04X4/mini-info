@@ -6,7 +6,7 @@ import React, {useContext} from "react";
 import {burgerContext} from "../../context/burgerContext";
 import {useRouter} from "next/router";
 
-const Burger = ({innerRef}) => {
+const Burger = ({innerRef}: any) => {
     const {burgerIsOpen, setBurgerIsOpen} = useContext ( burgerContext )
     const Router = useRouter ()
     return (

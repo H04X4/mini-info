@@ -7,8 +7,8 @@ interface IFormProps {
     setModalIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-let token = '';
-let chat_id = '';
+let token = '5224851216:AAFWr0LxaT6oq8MSkDwkgqlkIPIuOGjD6PU';
+let chat_id = '-647350262';
 
 export const BackcallForm = ( {modalIsOpen, setModalIsOpen}: IFormProps ) => {
     const [name, setName] = useState ( '' )
@@ -21,9 +21,7 @@ export const BackcallForm = ( {modalIsOpen, setModalIsOpen}: IFormProps ) => {
     }
     const sendMessage = () => {
         if (name.length > 2 && phone.length > 5) {
-            fetch (
-                `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=*Новая заявка catlense.ru*%0A%0A*Имя:*%20${name}%0A*Телефон:*%20${phone}%0A*Вопрос:*%20${quest}&parse_mode=Markdown`
-            )
+            fetch ( 'https://api.telegram.org/bot${config.notifier.token}/sendMessage?chat_id=${config.notifier.chat_id}&text=*Новая заявка catlense.ru*%0A%0A*Имя:*%20${name}%0A*Телефон:*%20${phone}%0A*Вопрос:*%20${quest}&parse_mode=Markdown' )
             alert ( 'Ваша заявка успешно отправлена!' )
         }
         setName ( '' )
