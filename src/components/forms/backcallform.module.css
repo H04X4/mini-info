@@ -1,27 +1,24 @@
-
 .popupWrapper{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0,0,0,.6);
+    top: 0;
+    left: -6px;
     z-index: -1;
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity .5s;
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 .container{
- 
     max-width: 500px;
-
     background: white;
     box-shadow: 0px 5px 30px rgba(0, 0.05);
     border-radius: 25px;
     padding: 28px;
-    padding-top: 55px;
     padding-bottom: 55px;
     z-index: 99999;
     position: relative;
@@ -30,23 +27,19 @@
 .close {
     font-size: 42px;
     text-align: right;
- 
     right: 25px;
-    top: 12px;
     opacity: .4;
     cursor: pointer;
     transition: opacity .3s;
-
   }
 .h1 {
+    margin-bottom: 30px;
     font-size: 22px;
     color: #333333;
     line-height: 1.4;
     text-align: center;
     max-width: 450px;
-    margin: 0;
     padding: 0;
-
   }
 .input {
     max-width: 386px;
@@ -62,22 +55,24 @@
     margin-top: 15px;
 }
 .button{
-    max-width: 386px;
+    max-width: 400px;
     width: calc(100% - 15px);
     height: 46px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     display: block;
-    margin: 0 auto;
     padding-left: 14px;
     font-size: 14px;
+    background: #FF5E5E;
+    color: white;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 15px;
+    margin: 30px auto 0;
 }
 
 .popupWrapperActive {
     z-index: 9999;
     opacity: 1;
+    transition: opacity .5s;
 }
 @media (max-width: 520px) {
     .container{

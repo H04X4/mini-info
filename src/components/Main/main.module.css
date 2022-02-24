@@ -19,7 +19,7 @@
     left: 0;
     max-width: 400px;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 45px);
     background-color: indianred;
     transform: translateX(-100%);
     transition: transform 0.5s;

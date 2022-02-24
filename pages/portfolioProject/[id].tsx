@@ -4,14 +4,14 @@ import {useRouter} from "next/router";
 import {projectsData} from "../../src/constants/projectsData";
 import Footer from "../../src/components/Footer/footer";
 import Image from 'next/image'
+import {MainContainer} from "../../src/containers/mainContainer";
 
 const PortfolioProject = () => {
     const router = useRouter ()
     const {id} = router.query
     const project = projectsData.find ( project => project.id === +id! )
     return (
-        <>
-            <Header/>
+        <MainContainer title = {'Project'}>
             <div className={s.wrapper}>
             <div className={s.container}>
                 <div className={s.projectInfo}>
@@ -51,7 +51,7 @@ const PortfolioProject = () => {
             </div>
             </div>
             <Footer/>
-        </>
+        </MainContainer>
     );
 };
 
