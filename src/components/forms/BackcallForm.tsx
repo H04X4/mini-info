@@ -21,7 +21,7 @@ export const BackcallForm = ( {modalIsOpen, setModalIsOpen}: IFormProps ) => {
     }
     const sendMessage = () => {
         if (name.length > 2 && phone.length > 5) {
-            fetch ( 'https://api.telegram.org/bot${config.notifier.token}/sendMessage?chat_id=${config.notifier.chat_id}&text=*Новая заявка catlense.ru*%0A%0A*Имя:*%20${name}%0A*Телефон:*%20${phone}%0A*Вопрос:*%20${quest}&parse_mode=Markdown' )
+            fetch ( `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=*Новая заявка catlense.ru*%0A%0A*Имя:*%20${name}%0A*Телефон:*%20${phone}%0A*Вопрос:*%20${quest}&parse_mode=Markdown` )
             alert ( 'Ваша заявка успешно отправлена!' )
         }
         setName ( '' )
