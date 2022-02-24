@@ -1,5 +1,6 @@
 import type {NextPage} from 'next';
-import Image from 'next/image'
+import Image from 'next/image';
+import React, {useContext, useState} from "react";
 import contact from './contact.module.css';
 import telegram from '../assets/img-contact/telegram.svg'
 import email from '../assets/img-contact/email.svg'
@@ -9,9 +10,15 @@ import github from '../assets/img-contact/github.svg'
 import discord from '../assets/img-contact/discord.svg'
 import instagram from '../assets/img-contact/instagram.svg'
 
+
+// import {BackcallForm} from "../forms/BackcallForm";
 const Contact: NextPage = () => {
+
+    // const [modalIsOpen, setModalIsOpen] = useState<boolean> ( false )
     return (
+        
         <div className={contact.wrapper} id="contacts">
+            {/* <BackcallForm modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/> */}
             <div className={contact.connection}>
                 <p>Свяжитесь с нами</p>
             </div>
@@ -32,7 +39,14 @@ const Contact: NextPage = () => {
                     <Image className={contact.phoneimg} src={phone}/>
                     <p className={contact.lable}>Обратный звонок</p>
                     <p className={contact.communication}>Закажите обратный звонок</p>
+                    
                     <input className={contact.btn} type='submit' value='Заказать'/>
+                    {/* модалку подкл осталость, но там некие правки в css надо будет сделать, желательно создай в папке contact новую папку 
+                    modal.module.css and modal.tsx и добавь туда код из Backcallform.module.css and Backcallform.tsx и подправь чутка css */}
+                    {/* // onClick={() => {
+                    //     setModalIsOpen ( !modalIsOpen )
+                    //     document.body.style.overflow = 'hidden'
+                    // }} */}
                 </div>
             </div>
             <div className={contact.social}>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import s from './teamMembers.module.css'
 import {motion} from "framer-motion";
+import Header from "../Header/header";
 import Footer from "../Footer/footer";
 import {teamMembers} from "../../constants/teamMembers";
 
@@ -19,8 +20,10 @@ export const featureAnimation = {
 }
 const TeamMembers = () => {
     return (
-        <>
+        
+    
             <div className={s.container}>
+                
                 {teamMembers.map ( ( elem, idx ) => (
                     <motion.div key={elem.name + idx} className={s.member}
                                 custom={idx + 1} variants={featureAnimation}
@@ -32,7 +35,7 @@ const TeamMembers = () => {
                     </motion.div> ) )}
             </div>
            
-        </>
+     
     );
 };
 

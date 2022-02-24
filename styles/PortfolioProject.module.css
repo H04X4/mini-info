@@ -89,6 +89,7 @@
     }
     .discr {
         text-align: center;
+        max-width: 305px;
         
     } 
 }

@@ -1,6 +1,6 @@
 import {Dispatch, SetStateAction, useState} from 'react'
 
-import style from './backcallform.module.scss'
+import style from './backcallform.module.css'
 
 interface IFormProps {
     modalIsOpen: boolean
@@ -31,23 +31,25 @@ export const BackcallForm = ( {modalIsOpen, setModalIsOpen}: IFormProps ) => {
     }
 
     return (
+        <div className={style.cmd}>
         <div className={`${style.popupWrapper} ${modalIsOpen ? style.popupWrapperActive : ''}`}>
             <div className={style.container}>
                 <div className={style.close} onClick={( e ) => backcall ( e )}>&times;</div>
-                <h1>Заполните форму и мы вам перезвоним как можно скорее!</h1>
-                <input type="text" placeholder="Ваше имя" onChange={( {target} ) => setName ( target.value )}
+                <h1 className={style.h1}>Заполните форму и мы вам перезвоним как можно скорее!</h1>
+                <input className={style.input} type="text" placeholder="Ваше имя" onChange={( {target} ) => setName ( target.value )}
                        value={name}/>
-                <input type="phone" pattern="[0-9]*" placeholder="Ваш телефон"
+                <input className={style.input} type="phone" pattern="[0-9]*" placeholder="Ваш телефон"
                        onChange={( {target} ) => setPhone ( target.value )} value={phone}/>
-                <input type="text" placeholder="Ваш вопрос" onChange={( {target} ) => setQuest ( target.value )}
+                <input className={style.input} type="text" placeholder="Ваш вопрос" onChange={( {target} ) => setQuest ( target.value )}
                        value={quest}/>
-                <button onClick={( e ) => {
+                <button className={style.button}  onClick={( e ) => {
                     sendMessage ()
                     backcall ( e )
                 }}>
                     Заказать звонок
                 </button>
             </div>
+        </div>
         </div>
     )
 }
