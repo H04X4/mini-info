@@ -10,10 +10,7 @@ const Portfolio = () => {
             <div className={s.container}>
                 <Projects/>
             </div>
-            <Footer /> 
         </MainContainer>
-
-        
     );
 };
 

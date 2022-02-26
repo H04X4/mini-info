@@ -6,9 +6,11 @@ import {Link as Reference} from 'react-scroll'
 import React, {useContext} from "react";
 import cn from 'classnames';
 import {burgerContext} from "../../context/burgerContext";
+import {useRouter} from "next/router";
 
 const Header = ( {innerRef}: any ) => {
     const {burgerIsOpen, setBurgerIsOpen} = useContext ( burgerContext )
+    const router = useRouter()
     return (
         <div ref={innerRef} className={header.wrapper}>
             <header className={header.header}>
@@ -26,7 +28,7 @@ const Header = ( {innerRef}: any ) => {
                         <li className={header.header_list}>Команда</li>
                     </Link>
                     <Reference to='contacts' smooth={true}>
-                        <li className={header.header_list}>Контакты</li>
+                        <li onClick={()=> router.push('/')} className={header.header_list}>Контакты</li>
                     </Reference>
                 </ul>
                 <div className={burgerIsOpen ? cn ( header.burger, header.activeBurger ) : header.burger}

@@ -77,7 +77,7 @@ const Main: React.FC = (): JSX.Element => {
                     </div>
                 </div>
             </div>
-            <Contact/>
+            <Contact setModalIsOpen = {setModalIsOpen} />
             <Footer/>
 
         </MainContainer>

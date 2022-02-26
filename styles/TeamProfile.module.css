@@ -1,14 +1,10 @@
 .container {
-
     margin-top: 78px;
     display: flex;
     flex-wrap: wrap;
-    -webkit-animation: TeamProfile_containerAnimation__Bas6e 1.5s forwards;
-    animation: TeamProfile_containerAnimation__Bas6e 1.5s forwards;
+    animation: containerAnimation 1.5s forwards;
     flex-direction: row;
     justify-content: center;
-
-
 
 }
 
@@ -24,7 +20,7 @@
 .teamMemberContainer {
     align-items: center;
     margin-bottom: 41px;
-    
+
     height: 202px;
     display: flex;
     background: #F9F9F9;
@@ -37,8 +33,8 @@
 .memberImage {
     margin-left: 20px;
     border-radius: 500px;
-    
-   
+
+
 }
 
 .memberInfo {
@@ -70,27 +66,29 @@
     height: 76px;
 }
 
-@media (max-width: 376px)  {
+@media (max-width: 376px) {
     .container {
         display: flex;
         justify-content: center;
         margin-left: 15px;
-        
+
     }
-    .memberImage{
+
+    .memberImage {
         display: none;
     }
 
 }
 
-@media (max-width: 412px)  {
+@media (max-width: 412px) {
     .container {
         display: flex;
         justify-content: center;
         margin-left: 15px;
-        
+
     }
-    .memberImage{
+
+    .memberImage {
         display: none;
     }
 }

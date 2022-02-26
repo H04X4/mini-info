@@ -2,7 +2,6 @@ import s from '../styles/TeamProfile.module.css'
 import {teamMembers} from "../src/constants/teamMembers";
 import Image from 'next/image'
 import {MainContainer} from "../src/containers/mainContainer";
-import Footer from "../src/components/Footer/footer";
 
 const TeamProfile = () => {
     return (
@@ -19,10 +18,8 @@ const TeamProfile = () => {
                             <div className={s.memberDscr}>{member.dscr}</div>
                         </div>
                     </div>
-
                 ) )}
             </div>
-            <Footer/>
         </MainContainer>
     );
 };
